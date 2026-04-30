@@ -26,6 +26,22 @@ class ProdutoEdit extends Component
         $this->quantidade_minima = $produto->quantidade_minima;
 
     }
+    public function update(){
+        $produto = Produto::find($this->produto_id);
+        if($produto == null){
+            session()->flash('error', 'não encontrado');
+            return redirect()->route('produto.index');
+        }
+        $produto->nome = $this->nome;
+        $produto->valor = $this->valor;
+        $produto->quantidade = $this->quantidade;
+        $produto->quantidade_minima = $this->quantidade_minima;
+        $produto->save();
+
+        session()->flash('success', 'Atualizado');
+        return redirect()->route('produto.index');
+    }
+
 
     public function render()
     {
