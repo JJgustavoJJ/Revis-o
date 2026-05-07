@@ -18,28 +18,28 @@ class DatabaseSeeder extends Seeder
        User::create([
         'name' => 'Adimin',
         'email' => 'admin@senai.br',
-        'passord' => Hash::make('123'),
+        'password' => Hash::make('123'),
        ]);
 
        Produto::create([
         'nome' => 'Martelo',
         'valor' => 50.90,
-        'qtn_estoque' => 0,
-        'qtn_minima' =>5
+        'qtd_estoque' => 0,
+        'qtd_minima' =>5
        ]);
 
        Produto::create([
         'nome' => 'Alicate',
         'valor' => 30,
-        'qtn_estoque' => 0,
-        'qtn_minima' => 3
+        'qtd_estoque' => 0,
+        'qtd_minima' => 3
        ]);
 
        Produto::create([
         'nome' => 'Furadeira',
         'valor' => 99.99,
-        'qtn_estoque' => 0,
-        'qtn_minima' => 8
+        'qtd_estoque' => 0,
+        'qtd_minima' => 8
        ]);
         
         
